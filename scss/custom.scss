@@ -303,6 +303,7 @@ body {
 
 .small-row{
     margin-bottom: 60px;
+    
 }
 .card-title{
     color: rgb(35, 184, 109);
@@ -329,14 +330,9 @@ body {
 }
 
 .addFocus {
-    transition: transform 1s ease-in, background-color $easy, box-shadow $easy;
+    transition: transform 1s ease-in, box-shadow $easy;
     transform: scale(1.2);
-    box-shadow: 0px 0px 9999px 9999px rgba(255, 182, 109, 0.3);
-    background: rgba(255, 182, 109, 0.5);
-    border-radius: 20px;
-    .card-title{
-        color: #fff;
-    }
+    box-shadow: 0px 0px 10px 10px rgba(167, 167, 167, 0.3);
 }
 
 .tileframe{

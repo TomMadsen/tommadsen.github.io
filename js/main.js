@@ -82,9 +82,8 @@ function addStickies() {
 
 let $card = $('.small-row');
 function addInteractions(){
-    $card.click(function(e){
+    $card.on('click', function(e){
         if (!$(this).hasClass('addFocus')){
-            e.preventDefault();
         $card.each(function(){
             $(this).removeClass('addFocus');
         })
@@ -95,7 +94,7 @@ function addInteractions(){
         }
     });
 
-    $(window).click(function(e){
+    $(document).on('click', function(e){
         if (!$(e.target).hasClass('small-row')){
         $card.each(function () {
             $(this).removeClass('addFocus');
@@ -129,7 +128,7 @@ $form.submit(function (e) {
 ////////////////////////////////////////////////////////////////////
 
 
-$('document').ready(function () {
+$(document).ready(function () {
     letterize($('.hero'));
     addInteractions();
 });
