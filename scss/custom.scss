@@ -204,12 +204,6 @@ body {
     animation-name: slideIn;
 }
 
-.carousel{
-    height: 400px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
 
 //////////////////////////////////////////////////
 //                 Stickiness                   //
@@ -272,6 +266,16 @@ body {
 //          carousel images                 //
 //////////////////////////////////////////////
 
+.carousel {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: .8rem;
+    @include mq(med) {
+        font-size: 1rem;
+    }
+}
+
 .c-image{
     height: 100%;
     @include mq(med){
@@ -284,7 +288,13 @@ body {
 }
 
 .carousel-title{
-    width: 80%;
+    width: 60vw;
+    @include mq(med){
+        width: 45vw;
+    }
+    @include mq(lg) {
+        width: 35vw;
+    }
 }
 
 ////////////////////////////////////////////////////
@@ -307,9 +317,10 @@ body {
 }
 
 .card-text{
-    @media (hover: hover) and (pointer: fine) {
+    @media (hover: hover), (min-width: 450px) {
         display: none;
     }
+
 }
 
 
