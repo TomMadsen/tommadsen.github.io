@@ -66,7 +66,7 @@ function addStickies() {
         $marker2.removeClass("also-stuck");
         $push2.removeClass("also-pushed-down");
     }
-    if ($(window).scrollTop() >= ($sticky3 - 100)) {
+    if ($(window).scrollTop() >= ($sticky3 -40)) {
 
         $marker3.addClass("also-stuck");
         $push3.addClass("also-pushed-down");
