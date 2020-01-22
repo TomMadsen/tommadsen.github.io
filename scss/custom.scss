@@ -317,9 +317,16 @@ body {
 }
 
 .card-text{
-    @media (hover: hover), (min-width: 450px) {
+    @media (hover: hover){
         display: none;
     }
+.overlay-text{
+    display: none;
+    @media (hover: none), (min-width: 450px) {
+        display: inline;
+    }
+}
+
 
 }
 

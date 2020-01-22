@@ -260,9 +260,17 @@ body {
   }
 }
 
-@media (hover: hover), (min-width: 450px) {
+@media (hover: hover) {
   .card-text {
     display: none;
+  }
+}
+.card-text .overlay-text {
+  display: none;
+}
+@media (hover: none), (min-width: 450px) {
+  .card-text .overlay-text {
+    display: inline;
   }
 }
 
