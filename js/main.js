@@ -59,21 +59,21 @@ function addStickies() {
         $mainMarker.removeClass("stuck");
         $push1.removeClass("pushed-down");
     }
-    if ($(window).scrollTop()>= ($sticky2 - 56)) {
+    if ($(window).scrollTop() >= ($sticky2)) {
         $marker2.addClass("also-stuck");
         $push2.addClass("also-pushed-down");
     } else {
         $marker2.removeClass("also-stuck");
         $push2.removeClass("also-pushed-down");
     }
-    if ($(window).scrollTop() >= ($sticky3 -40)) {
-
+    if ($(window).scrollTop() >= $sticky3) {
         $marker3.addClass("also-stuck");
         $push3.addClass("also-pushed-down");
     }   else{
         $marker3.removeClass("also-stuck");
         $push3.removeClass("also-pushed-down");
     }
+    
 }
 
 /////////////////////////////////////////////////////
