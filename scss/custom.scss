@@ -330,9 +330,10 @@ body {
 }
 
 .addFocus {
-    transition: transform 1s ease-in, box-shadow $easy;
+    transition: transform 1s ease-in, box-shadow $easy, background-color $easy;
     transform: scale(1.2);
     box-shadow: 0px 0px 10px 10px rgba(167, 167, 167, 0.3);
+    background-color: #fff6ed;
 }
 
 .tileframe{
