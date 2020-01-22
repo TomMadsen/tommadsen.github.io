@@ -81,27 +81,28 @@ function addStickies() {
 /////////////////////////////////////////////////////
 
 let $card = $('.small-row');
-$card.click(function(e){
-    if (!$(this).hasClass('addFocus')){
-        e.preventDefault();
-    $card.each(function(){
-        $(this).removeClass('addFocus');
+function addInteractions(){
+    $card.click(function(e){
+        if (!$(this).hasClass('addFocus')){
+            e.preventDefault();
+        $card.each(function(){
+            $(this).removeClass('addFocus');
+        })
+        $(this).addClass('addFocus');
+        
+        } else {
+            $(this).removeClass('addFocus');
+        }
+    });
+
+    $(window).click(function(e){
+        if (!$(e.target).hasClass('small-row')){
+        $card.each(function () {
+            $(this).removeClass('addFocus');
+        })
+        }
     })
-    $(this).addClass('addFocus');
-    
-    } else {
-        $(this).removeClass('addFocus');
-    }
-});
-
-$(window).click(function(e){
-    if (!$(e.target).hasClass('small-row')){
-      $card.each(function () {
-          $(this).removeClass('addFocus');
-      })
-    }
-})
-
+}
 
 
 
@@ -130,6 +131,7 @@ $form.submit(function (e) {
 
 $('document').ready(function () {
     letterize($('.hero'));
+    addInteractions();
 });
 
 $(window).scroll(function(){
