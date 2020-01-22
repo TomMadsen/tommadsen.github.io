@@ -39,6 +39,18 @@ $break-lg: 1024px;
     }
 }
 
+@mixin sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: $main-white;
+    z-index: 16;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background-color: rgb(82, 255, 169);
+}
+
+
 
 ///////////////////////////////////////////
 //           Keyframes                   //
@@ -170,7 +182,7 @@ body {
     margin: 25px auto 40px;
     display: block;
     img{
-        height: 3rem;
+        height: 70px;
     }
 }
 
@@ -202,18 +214,6 @@ body {
 //////////////////////////////////////////////////
 //                 Stickiness                   //
 //////////////////////////////////////////////////
-
-@mixin sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: $main-white;
-    z-index: 16;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    background-color:rgb(82, 255, 169);
-}
-
 .stuck {
     @include sticky;
     
@@ -283,6 +283,10 @@ body {
     }
 }
 
+.carousel-title{
+    width: 80%;
+}
+
 ////////////////////////////////////////////////////
 //          Work Example cards and  transitions   // 
 ////////////////////////////////////////////////////
@@ -292,13 +296,19 @@ body {
 }
 .card-title{
     color: rgb(35, 184, 109);
-    text-shadow: 8px 8px 18px rgb(116, 116, 116);
+    text-shadow: 8px 8px 18px rgba(116, 116, 116, 0.5);
     font-size: 1.4rem;
     @include mq(med){
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
     @include mq(lg){
-        font-size: 3rem;
+        font-size: 2.3rem;
+    }
+}
+
+.card-text{
+    @media (hover: hover) and (pointer: fine) {
+        display: none;
     }
 }
 
@@ -345,53 +355,12 @@ body {
     background: rgba(0, 0, 0, .65);
 }
 
-.tile:hover .tile-overlay {
-    transform: translate(0, 0);
-}
-
-.start-up {
-    transform: translateY(100%);
-    opacity: 1;
-}
-.start-down {
-    transform: translateY(-100%);
-    opacity: 1;
-}
-.start-left {
-    transform: translateX(100%);
-    opacity: 1;
-}
-.start-right {
-    transform: translateX(-100%);
-    opacity: 1;
-}
-
 .start-opaque {
     opacity: 0;
 }
 
-.dissolve:hover .start-opaque{
-    opacity: 1;
-}
-
-.up:hover img {
-    transform: translateY(-100%);
-}
-
-.down:hover img{
-    transform: translateY(100%);
-}
-
-.right:hover img {
-    transform: translateX(100%);
-}
-
-.left:hover img {
-    transform: translateX(-100%);
-}
-
 .delay:hover img{
-    transform: scale( 1.2, 1.2)
+    transform: scale(1.2, 1.2)
 }
 
 .delay:hover .start-opaque{

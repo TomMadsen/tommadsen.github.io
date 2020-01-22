@@ -70,7 +70,6 @@ function addStickies() {
 
         $marker3.addClass("also-stuck");
         $push3.addClass("also-pushed-down");
-        console.log($windowHeight *2)
     }   else{
         $marker3.removeClass("also-stuck");
         $push3.removeClass("also-pushed-down");
@@ -81,31 +80,17 @@ function addStickies() {
 //                    Contact Page                                //
 ////////////////////////////////////////////////////////////////////
 
-class Friend {
-    constructor(name, instagram, email){
-        this._name = name;
-        this._instagram = instagram;
-        this._email = email;
-    }
-}
-let $name = $('#username'),
-    $insta = $('#userinsta'),
-    $email = $('#useremail'),
-    $message = $('#usermessage'),
-    $form = $('form');
 
+let $name = $('#entry.2005620554'),
+    $insta = $('#entry.807115045'),
+    $email = $('#entry.1045781291'),
+    $message = $('#entry.839337160'),
+    $form = $('form');
 $form.submit(function (e) {
-    e.preventDefault();
-    let user = new Friend($name.val(), $insta.val(), $email.val());
-    user.message = $message.val();
-    console.log(user)
-    // send this data to me.
     $name.val("");
     $insta.val("");
     $email.val("");
     $message.val("");
-
-
 });
 
 
