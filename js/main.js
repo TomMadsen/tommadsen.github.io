@@ -76,6 +76,35 @@ function addStickies() {
     }
 }
 
+/////////////////////////////////////////////////////
+//               Work Example interactions         //
+/////////////////////////////////////////////////////
+
+let $card = $('.small-row');
+$card.click(function(e){
+    if (!$(this).hasClass('addFocus')){
+        e.preventDefault();
+    $card.each(function(){
+        $(this).removeClass('addFocus');
+    })
+    $(this).addClass('addFocus');
+    
+    } else {
+        $(this).removeClass('addFocus');
+    }
+});
+
+$(window).click(function(e){
+    if (!$(e.target).hasClass('small-row')){
+      $card.each(function () {
+          $(this).removeClass('addFocus');
+      })
+    }
+})
+
+
+
+
 ////////////////////////////////////////////////////////////////////
 //                    Contact Page                                //
 ////////////////////////////////////////////////////////////////////
